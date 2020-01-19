@@ -8,8 +8,11 @@ import javax.ws.rs.core.MediaType;
 @Path("/hello")
 public class ExampleResource {
 
+//    @javax.inject.Inject
+//    ExampleDao dao;
+
     @javax.inject.Inject
-    ExampleDao dao;
+    Bar bar;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
