@@ -1,4 +1,4 @@
-package com.example;
+package com.example.sub;
 
 public class Foo {
 

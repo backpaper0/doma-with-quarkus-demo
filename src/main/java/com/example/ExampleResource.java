@@ -8,15 +8,17 @@ import javax.ws.rs.core.MediaType;
 @Path("/hello")
 public class ExampleResource {
 
-//    @javax.inject.Inject
-//    ExampleDao dao;
+    @javax.inject.Inject
+    ExampleDao dao;
 
     @javax.inject.Inject
     Bar bar;
+    @javax.inject.Inject
+    Baz baz;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return bar.getDataSource().toString();
+        return "DataSource: " + bar.getDataSource() + ", DAO: " + dao + ", bar: " + bar + ", baz: " + baz;
     }
 }
